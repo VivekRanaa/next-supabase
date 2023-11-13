@@ -8,6 +8,7 @@ import Link from "next/link";
 
 const Chat = ({ chat }: { chat: ChatWithMessageCountAndSettings }) => {
   const showMobileMenu = useSetAtom(mobileMenuAtom);
+
   return (
     <Link
       onClick={() => {
@@ -16,9 +17,10 @@ const Chat = ({ chat }: { chat: ChatWithMessageCountAndSettings }) => {
       title={chat.title as string}
       href={`/chat/${chat.id}`}
     >
-      <div className="flex items-center w-full gap-2 px-3 py-2 transition-colors duration-100 ease-in-out rounded-md bg-neutral-100 dark:bg-neutral-900 dark:hover:bg-neutral-800">
+      <div className="flex text-white items-center w-full gap-2 px-3 py-2 transition-colors duration-100 ease-in-out rounded-md bg-send dark:bg-neutral-900 dark:hover:bg-neutral-800">
         <MessageSquare className="shrink-0" size="16" />
         <div className="text-sm leading-loose line-clamp-1">{chat.title}</div>
+        
       </div>
       {/* Meta */}
       <div className="flex items-center mt-1 dark:text-neutral-600 text-neutral-400">

@@ -3,7 +3,7 @@ import { mobileMenuAtom } from "@/atoms/navigation";
 import useChats from "@/hooks/useChats";
 import { useAtom } from "jotai";
 import { Plus } from "lucide-react";
-import Logo from "../brand/logo";
+// import Logo from "../brand/logo";
 import Chats from "../chat/chats";
 import { Button } from "../ui/button";
 import ProfileMenu from "./profile-menu";
@@ -14,7 +14,7 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`fixed top-0 left-0 bottom-0 z-40 w-64 px-4 py-8 transition-transform -translate-x-full shadow-md md:translate-x-0 bg-black${
+      className={`fixed top-0 left-0 bottom-0 z-40 w-64 px-4 py-8 transition-transform -translate-x-full shadow-md md:translate-x-0 bg-c1${
         isMobileMenuOpen ? " !translate-x-0" : " "
       }`}
     >

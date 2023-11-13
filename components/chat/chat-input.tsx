@@ -57,7 +57,7 @@ const ChatInput = () => {
   }, [handleKeyDown]);
 
   return (
-    <div className="sticky bottom-0 left-0 right-0 px-4 py-10 sm:px-8 bg-gradient-to-b from-transparent dark:via-neutral-950/60 dark:to-neutral-950/90 via-neutral-50/60 to-neutral-50/90">
+    <div className="sticky bottom-0 left-0 right-0 px-4 py-10 sm:px-8 bg-c2 dark:via-neutral-950/60 dark:to-neutral-950/90 via-neutral-50/60 to-neutral-50/90">
       {/* Container */}
       <div className="w-full max-w-5xl mx-auto">
         {/* Abort Controller */}
@@ -77,7 +77,7 @@ const ChatInput = () => {
           <div className="items-center justify-center hidden py-2 sm:flex">
             <Button
               variant="ghost"
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 text-white hover:bg-black border border-white"
               onClick={regenerateHandler}
             >
               <span>Regenerate Response</span> <RefreshCw size="14" />
@@ -85,11 +85,11 @@ const ChatInput = () => {
           </div>
         )}
         {/* Settings */}
-        {hasChatMessages && <ChatSettingsMenu />}
+        {/* {hasChatMessages && <ChatSettingsMenu />} */}
         {/* Input Container */}
         <form
           onSubmit={handleSubmit}
-          className="flex items-center w-full py-2 bg-white rounded-md shadow-sm focus-within:ring-neutral-300 dark:focus-within:ring-neutral-500 focus-within:ring-1 dark:bg-neutral-900"
+          className="flex items-center w-full py-2 bg-send rounded-md shadow-sm focus-within:ring-neutral-300 dark:focus-within:ring-neutral-500 focus-within:ring-1 dark:bg-neutral-900"
         >
           <Textarea
             className="h-auto peer"

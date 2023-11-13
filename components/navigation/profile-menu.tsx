@@ -31,49 +31,11 @@ const ProfileMenu = () => {
             {user?.full_name?.slice(0, 2).toLocaleUpperCase() ?? "UU"}
           </AvatarFallback>
         </Avatar>
-        <div className="text-left whitespace-nowrap">
+        <div className="text-left text-white whitespace-nowrap">
           <div>{user?.full_name}</div>
-          {/* <div className="text-xs dark:text-neutral-400">@makrdev</div> */}
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-full mb-2" side="top" align="start">
-        <DropdownMenuLabel>
-          Created by{" "}
-          <Link href="https://www.twitter.com/makrdev">@makrdev</Link>
-        </DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <div className="flex items-center gap-1">
-            Prompts Library{" "}
-            <span className="px-2 py-1 text-xs rounded-md bg-neutral-100 dark:bg-neutral-600 dark:text-neutral-200">
-              Soon
-            </span>
-          </div>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <div className="flex items-center gap-1">
-            Collections{" "}
-            <span className="px-2 py-1 text-xs rounded-md bg-neutral-100 dark:bg-neutral-600 dark:text-neutral-200">
-              Soon
-            </span>
-          </div>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <div className="flex items-center gap-1">
-            Plugins{" "}
-            <span className="px-2 py-1 text-xs rounded-md bg-neutral-100 dark:bg-neutral-600 dark:text-neutral-200">
-              Soon
-            </span>
-          </div>
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem
-          onClick={() => {
-            setTheme(theme === "dark" ? "light" : "dark");
-          }}
-        >
-          Change Theme
-        </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem
           onClick={() => {

@@ -18,12 +18,12 @@ const Message = ({ message }: { message: MessageT }) => {
     <div
       className={
         !isAssistant
-          ? "dark:bg-neutral-950/60 bg-neutral-100/50"
-          : "dark:bg-neutral-900 bg-neutral-200/40 last:pb-64 last:sm:pb-44"
+          ? "dark:bg-neutral-950/60 bg-c2 text-white"
+          : "dark:bg-neutral-900 bg-c3 last:pb-64 last:sm:pb-44 text-white"
       }
     >
       {/* Container */}
-      <div className="flex w-full max-w-3xl gap-4 px-4 py-10 mx-auto sm:px-8">
+      <div className="flex w-full max-w-3xl gap-4 px-4 py-10 mx-auto sm:px-8 bg-opacity-0">
         {/* Avatar */}
         <Avatar className="w-8 h-8 ring-2 ring-offset-2 dark:ring-neutral-700 ring-neutral-400">
           <AvatarImage
